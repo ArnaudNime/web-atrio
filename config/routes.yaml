@@ -1,0 +1,35 @@
+controllers:
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
+get_person:
+  path: api/v1/person/{personId}
+  controller: App\Controller\Person\GetPerson::get
+  methods: GET
+
+get_person_list:
+  path: api/v1/persons
+  controller: App\Controller\Person\GetPersonList::getList
+  methods: GET
+
+get_person_list_by_society:
+  path: api/v1/society/{societyId}/persons
+  controller: App\Controller\Person\GetPersonListBySociety::getList
+  methods: GET
+
+get_society_list:
+  path: api/v1/societies
+  controller: App\Controller\Society\GetSocietyList::getList
+  methods: GET
+
+create_person:
+  path: api/v1/person
+  controller: App\Controller\Person\CreatePerson::create
+  methods: POST
+
+add_professional_experience:
+  path: api/v1/professional-experience
+  controller: App\Controller\ProfessionalExperience\AddProfessionalExperienceController::add
+  methods: POST
